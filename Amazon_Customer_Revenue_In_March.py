@@ -8,6 +8,7 @@ df1 = orders.drop_duplicates()
 df2 = df1[(df1.order_date >= '2019-03-01') & (df1.order_date <= '2019-03-31')]
 df2 = df1[df1.order_date.between('2019-03-01', '2019-03-31')]
 df2 = df1[df1.order_date.dt.strftime("%Y-%b") == "2019-Mar"]
+df2 = df1[df1.order_date.dt.strftime("%Y-%m") == "2019-03"]
 # if you don't know how many days in March
 df2 = df1[(df1.order_date > '2019-03') & (df1.order_date < '2019-04')]
 
